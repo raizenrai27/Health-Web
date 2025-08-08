@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/project/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class = "bg-white-100">
+  <!--Navigation Bar-->
+ <nav class = "bg-gray-800 text-white flex flex-col md:flex-row justify-between items-center w-full px-6 py-0 mb-2 font-serif text-center" >
+  <div class=" flex flex-col md:flex-row items-center md:items-start">
+    <span class = "text-3xl mb-4 md:mb-0 md:ml-4 font-semibold">
+    PHO
+  </span>
+   <span class="text-4xl cursor-pointer md:hidden block">
+    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+    </span>
+  </div>
+ 
+ <ul  id="list" class="md:flex md:items-center md:items-center z-[1] md:z-auto md:static absolute bg-gray-800 w-full left-0 md:w-auto md:py-4 py-4 md:pl-0 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+ 
+    <li class="mx-4 my-4 md:my-0">
+      <a href="http://127.0.0.1:5501/project/index.html" id="nav-home" class="text-2xl hover:text-indigo-600 duration-500">Home</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="http://127.0.0.1:5501/project/aboutus.html" id="nav-about" class="text-2xl hover:text-indigo-600 duration-500">About Us</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="http://127.0.0.1:5501/project/activity.html" id="nav-activity" class="text-2xl hover:text-indigo-600 duration-500">Activity</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="http://127.0.0.1:5501/project/services.html" id="nav-services" class="text-2xl hover:text-indigo-600 duration-500">Services</a>
+    </li>
+  </ul>
+ </nav>
+
+ <!--Home Page-->
+ <section id="home" class="pt-50 bg-white py-12 px-6 pt-50 md:pt-28 transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+    <img src="image/pho.jpg" alt="Health" class="h-150 w-150 md:w-1/2 shadow-lg object-cover">
+    <div class="text-center md:text-left md:w-1/2">
+      <h1 class="text-4xl font-serif font-semibold mb-4">
+        Empowering Hospitals and Rural Health Units to Deliver Quality Services
+      </h1>
+      <p class="text-2xl font-italic leading-relaxed">
+        The Provincial Health Office focuses on empowering hospitals and rural health units by providing resources, training, and infrastructure support to ensure they can consistently deliver high-quality, patient-centered healthcare services.
+      </p>
+    </div>
+  </div>
+ </section>
+ <!--What Do We Do-->
+ <section class="bg-white py-14 px-20">
+  <div class="mx-auto text-center">
+    <h2 class="text-2xl font-serif font-semibold"> What Do We Do?</h2>
+  </div>
+  <div class="grid md:grid-cols-2 gap-8">
+  <!--Card 1-->
+  <div class="text-center bg-blue-400 p-6 rounded-lg hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <i class="fa-solid fa-notes-medical text-white"></i>
+    <h3 class="text-xl text-white font-semibold mb-2">Medical Training</h3>
+    <p class="text-white ">Continuous Learning for 
+          Healthcare Professionals in Hospital and Rural Health Units</p>
+  </div>
+  <!--Card 2-->
+  <div class="text-center bg-blue-400 p-6 rounded-lg hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <i class="fa-solid fa-house-medical text-white"></i>
+    <h3 class="font-semibold mb-2 text-white">Facility Support</h3>
+    <p class="text-white">Upgrading Infrastracture to meet the healthcare standards</p>
+  </div>
+  </div>
+ </section>
+  <script>
+    function Menu(e){
+     let list = document.querySelector('#list')
+
+     if (e.name === 'menu'){
+      e.name = 'close';
+      list.classList.add('top-[80px]', 'opacity-100');
+     }else{
+      e.name = 'menu';
+      list.classList.remove('top-[80px]', 'opacity-100');
+     }
+    }
+  </script>
+</body>
+</html>

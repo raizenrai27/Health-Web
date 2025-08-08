@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/project/style.css">
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Activity</title>
+</head>
+<body class="bg-white-100">
+    <nav class=" bg-black flex flex-col md:flex-row justify-between items-center w-full px-6 py-0 mb-2 font-serif text-center">
+        <div class="text-white flex flex-col md:flex-row items-center md:items-start">
+            <span class="text-3xl mb-4 md:mb-0 md:ml-4 font-semibold">
+                PHO
+            </span>
+            <span class="text-4xl cursor-pointer md:hidden block">
+                 <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
+        <ul id="listac" class="text-white md:flex md:items-center z-[1] md:z-auto md:static absolute bg-black w-full left-0 md:w-auto md:py-4 py-4 md:pl-0 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/index.html" id="nav-homeac" class="text-2xl hover:text-indigo-600 duration-500">Home</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/aboutus.html" id="nav-aboutac" class="text-2xl hover:text-indigo-600 duration-500">About Us</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/activity.html" id="nav-activityac" class="text-2xl hover:text-indigo-600 duration-500">Activity</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/services.html" id="nav-servicesac" class="text-2xl hover:text-indigo-600 duration-500">Services</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="activity" class="p-10 text-center">
+        <h1 class=" font-serif text-5xl md:text-4xl font-semibold text-gray-800 mb-20">
+            Provincial Health Office Activity</h1>
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 justify-between">
+        <div class="md:w-1/2">
+            <p class="text-2xl font-serif leading-relaxed text-center md:text-left">Implementation of <strong>iHOMIS Plus System</strong>  in District Hospitals</p>
+        </div>
+        <div class="w-full lg:w-1/2">
+            <img src="image/Implementation.jpg" alt="implementation" class="w-full max-w-lg mx-auto h-auto shadow-lg shadow-lg object-cover mb-10">
+        </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 justify-between">
+        <div class="md:w-1/2">
+            <p class="text-2xl font-serif leading-relaxed text-center md:text-left"><strong> 
+                Cyber Security Training</strong> for System Administrator</p>
+        </div>
+        <div class="w-full lg:w-1/2">
+            <img src="image/CyberSecurity.jpg" alt="Cybersecurity" class="w-full max-w-lg mx-auto h-auto shadow-lg shadow-lg object-cover mb-10">
+
+        </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+            <div class="md:w-1/2">
+                <p class="text-2xl font-serif font-semibold leading-relaxed text-center md:text-left">Turnover of Digihealth ATM Machine</p>
+            </div>
+            <div class="w-full lg:w-1/2">
+                <img src="image/Digihealth.jpg" alt="Digihealth" class="w-full max-w-lg mx-auto h-auto shadow-lg shadow-lg object-cover mb-10" >
+
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function Menu(e){
+            let listac = document.querySelector('http://127.0.0.1:5501/project/index.htmllistac')
+
+        if (e.name ==='menu'){
+            e.name = 'close';
+            listac.classList.add('top-[80px]', 'opacity-100');
+        }else{
+            e.name = 'menu';
+            listac.classList.remove('top-[80px]', 'opacity-100');
+        }
+        }
+    </script>
+    
+</body>
+</html>

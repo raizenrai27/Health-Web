@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/project/style.css">
+    <title>Morbidity Form</title>
+</head>
+<body class="bg-gray-100">
+    <div class=" flex items-center justify-center mt-10 font-serif">
+        <form action="" class="bg-white p-6 shadow-lg rounded-lg max-w-lg">
+            <h2 class="text-2xl text-center mb-4">Hospital Morbidity Form</h2>
+            <label for="hospital" class="font-medium">Hospital</label><br>
+            <select name="" required id="hospital" class="w-full px-2 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="Hospital" disabled selected >Select Hospital</option>
+                <option value="bmch">Bato Maternity and Childrens Hospital</option>
+                <option value="cmh">Caramoran Municipal Hospital</option>
+                <option value="gdh">Gigmoto District Hospital</option>
+                <option value="jmamdh">Juan M. Alberto Memorial District Hospital</option>
+                <option value="pdh">Pandan District Hospital</option>
+                <option value="vdh">Viga District Hospital</option>
+                <option value="">Eastern Bicol Medical Center</option>
+            </select><br>
+            <label for="month" class="font-medium">Month</label>
+            <select name="" id="month" class="w-full px-2 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="" disabled selected>Select Month</option>
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+            </select>
+            <label for="disease">Disease</label>
+            <input type="text"  name="disease" class="w-full border rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" 
+            placeholder="Full Name of Disease (Do not abbreviate)">
+            <div class="flex justify-between gap-4 mb-4">
+                <div class="w-1/2">
+            <label for="age" class="block font-medium">Age:</label>
+            <select name="" id="age" class="w-full px-2 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="" disabled selected>Select Age</option>
+                <option value="06">0-6 weeks</option>
+                <option value="07">7-28 weeks</option>
+                <option value="U1">Under 1 year old</option>
+                <option value="14">1-4 years old</option>
+                <option value="59">5-9 years old</option>
+                <option value="1014">10-14 years old</option>
+                <option value="1519">15-19 years old</option>
+                <option value="2024">20-24 years old</option>
+                <option value="2529">25-29 years old</option>
+                <option value="3034">30-34 years old</option>
+                <option value="3539">35-39 years old</option>
+                <option value="4044">40-44 years old</option>
+                <option value="4549">45-49 years old</option>
+                <option value="5054">50-54 years old</option>
+                <option value="5559">55-59 years old</option>
+                <option value="6064">60-64 years old</option>
+                <option value="6569">65-69 years old</option>
+                <option value="70AB">70 years old above</option>
+            </select>
+            </div>
+            <div class="w-1/2">
+            <label for="gender" class="px-2">Gender:</label>
+            <select name="" id="gender" class="w-full border px-2 py-1 rounded-lg focus:outline-none focus:ring-2 mb-2">
+                <option value="" disabled selected> Select Gender</option>
+                <option value="">Male</option>
+                <option value="">Female</option>
+            </select>
+            </div>
+         </div>
+            <label for="date">Encoded Date:</label>
+            <input type="date" name="date" class="border rounded-lg px-2 py-1"><br>
+            <div class="text-center mt-5">
+            <input type="submit" class=" font-medium px-4 py-1 text-center rounded-lg bg-blue-500 text-white hover:scale-105">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

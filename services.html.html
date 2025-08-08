@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/project/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Services</title>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-black text-white flex flex-col md:flex-row justify-between items-center w-full px-6 py-0 mb-2 font-serif text-center">
+        <div class="flex flex-col md:flex-row items-center md:items-start">
+            <span class="text-3xl mb-4 md:mb-0 md:ml-4 font-semibold">
+                PHO
+            </span>
+            <span class="text-4xl cursor-pointer md:hidden block">
+                  <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
+        <ul id="listss" class="md:flex md:items-center z-[1] md:z-auto md:static absolute bg-black w-full left-0 md:w-auto md:py-4 py-4 md:pl-0 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/index.html" id="nav-homess" class="text-2xl hover:text-indigo-600 duration-500">Home</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/aboutus.html" id="nav-aboutss" class="text-2xl hover:text-indigo-600 duration-500">About Us</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/activity.html" id="nav-activityss" class="text-2xl hover:text-indigo-600 duration-500">Activity</a>
+            </li>
+            <li class="mx-4 my-4 md:my-0">
+                <a href="http://127.0.0.1:5501/project/services.html" id="nav-servicesss" class="text-2xl hover:text-indigo-600 duration-500">Services</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Hospital Stats Submission Report-->
+    <div class="flex justify-center items-center mt-10 font-serif">
+  <form class="bg-white p-6 shadow-lg rounded-lg w-full max-w-lg">
+    <h2 class="text-2xl font-bold text-center mb-4">Hospital Statistical Report Submission Report</h2>
+    <label for="Hospital" class="font-medium">Hospital</label>
+    <select name="" id="hospitals" 
+    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        Select Hospital
+    <option value="" disabled selected>Select Hospital</option>
+    <option value="">Bato Maternity Children's Hospital</option>
+    <option value="">Caramoran Municipal Hospital</option>
+    <option value="">Gigmoto District Hospital</option>
+    <option value="">Juan M. Alberto Memorial District Hospital</option>
+    <option value="">Pandan District Hospital</option>
+    <option value="">Viga District Hospital</option>
+    <option value="">Eastern Bicol Medical Center</option>
+    </select>
+    <label for="Month" class="font-medium mt-4 block">Month</label>
+    <select name="" id="month" 
+    class=" w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+    <option value="" disabled selected>Select Month</option>
+    <option value="">January</option>
+    <option value="">February</option>
+    <option value="">March</option>
+    <option value="">April</option>
+    <option value="">May</option>
+    <option value="">June</option>
+    <option value="">July</option>
+    <option value="">August</option>
+    <option value="">September</option>
+    <option value="">October</option>
+    <option value="">November</option>
+    <option value="">December</option>
+    </select>
+    <label for="date" class="font-medium">Submission Date</label><br>
+    <input type="date" name="submission_date" class="border rounded-lg items-center mb-2"><br>
+    <div class=" flex items-center space-x-4 mb-4">
+    <label for="fileInput" class="cursor-pointer bg-blue-400 hover:bg-blue-500 text-white px-3 py-1 rounded
+    ">Upload File
+     </label>
+    <input type="file" name ="report_file"class="hidden" id="fileInput">
+    <span id="fileName" class="tex-sm tex-gray-600">No file chosen</span>
+    </div>
+    <div class="text-center pt-5">
+        <input type="submit" class="border px-3 py-1 rounded-lg bg-blue-400 text-white hover:scale-105">
+    </div>
+  </form>
+</div>
+    </div>
+    <script>
+        //toggle function
+        function Menu(e){
+            let listss = document.querySelector('#listss')
+
+        if(e.name ==='menu'){
+            e.name ='close';
+            listss.classList.add('top-[80px]', 'opacity-100')
+        }else{
+            e.name ='menu';
+            listss.classList.remove('top[80px]', 'opacity-100')
+        }
+        }
+
+        //for updating file
+        document.addEventListener("DOMContentLoaded", function(){
+            const fileInput = document.getElementById("fileInput")
+            const fileName = document.getElementById("fileName")
+            
+            if(fileInput){
+                fileInput.addEventListener("change", function(){
+                    const file = fileInput.files[0];
+
+                    if(file){
+                        const allowedTypes = [ "application/pdf",
+                    "application/vnd.ms-excel",
+                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                ];
+                if(!allowedTypes.includes(file.type)){
+                    alert("Only PDF or Excel files are allowed");
+                    fileInput.value = "";
+                    fileName.textContent = "No file chosen";
+                    return;
+                }
+                fileName.textContent = file.name;
+                    } else{
+                        fileName.textContent = "No file chosen";
+                    }
+                })
+            }
+
+
+        });
+
+    </script>
+</body>
+</html>
